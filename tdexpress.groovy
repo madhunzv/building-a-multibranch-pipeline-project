@@ -11,7 +11,7 @@ pipeline{
                     def props = readYaml file: "${workspace}/config.yml"
                     def var = props.skipconfig.config1.toString()
                     def s = props.size()
-                    echo ${x}
+                    print ${x}
                 }
                 //print "${workspace}"
                 //print "${var}"
