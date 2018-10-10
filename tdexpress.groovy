@@ -1,4 +1,4 @@
-def datas
+//def datas
 //def var1
 pipeline{
     agent none
@@ -19,7 +19,7 @@ pipeline{
                 }
                 
                 echo datas.config1.toString()
-                sh "chmod +x build.sh && ./build.sh ${params.Timestamp} ${var1}"
+                //sh "chmod +x build.sh && ./build.sh ${params.Timestamp} ${var1}"
                 //echo "Timestamp is ${params.Timestamp}"
                 //print "${workspace}"
                 //print "${var}"
