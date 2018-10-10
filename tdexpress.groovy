@@ -9,7 +9,7 @@ pipeline{
                 script{
                     def workspace = pwd()
                     def props = readYaml file: "${workspace}/config.yml"
-                    def x = props['skipconfig'][0]['config1']
+                    def x = props.skipconfig.config1.toString()
                     //echo $x
                 }
                 print "${workspace}"
