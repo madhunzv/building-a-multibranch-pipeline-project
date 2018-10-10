@@ -8,7 +8,7 @@ pipeline{
                 
                 script{
                     def workspace = pwd()
-                    def props = readYaml file: "${workspace}/config.yml"
+                    def props = readYaml file: "${workspace}/building-a-multibranch-pipeline-project/config.yml"
                     def var = props.skipconfig.config1.toString()
                     echo props.skipconfig.config1.toString()
                 }
