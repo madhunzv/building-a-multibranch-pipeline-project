@@ -10,7 +10,8 @@ pipeline{
                     def workspace = pwd()
                     def props = readYaml file: "${workspace}/config.yml"
                     def var = props.skipconfig.config1.toString()
-                    echo props.size()
+                    def s = props.size()
+                    echo ${x}
                 }
                 //print "${workspace}"
                 //print "${var}"
