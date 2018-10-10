@@ -1,10 +1,6 @@
 pipeline{
     agent none
     environment{
-        script{
-            pr = readYaml file: "${workspace}/config.yml"
-            x = pr['skipconfig'][0]['config1']
-        }
     }
     stages{
         stage('Build VMX'){
@@ -13,10 +9,10 @@ pipeline{
                 script{
                     def workspace = pwd()
                     def props = readYaml file: "${workspace}/config.yml"
-                    //def x = props['skipconfig'][0]['config1']
-                    
-                    echo $x
+                    def x = props['skipconfig'][0]['config1']
+                    //echo $x
                 }
+                echo $x
             }
         }
     }
