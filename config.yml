@@ -1,4 +1,3 @@
-skipconfig:
-- config1: false
-- config2: true
-- config3: true
+config1: false
+config2: true
+config3: true
