@@ -16,7 +16,8 @@ pipeline{
                     //echo props.config1.toString()
                 }
                 echo datas.config1.toString()
-                echo "Timestamp is ${params.Timestamp}"
+                sh "chmod +x build.sh && ./build.sh ${params.Timestamp}"
+                //echo "Timestamp is ${params.Timestamp}"
                 //print "${workspace}"
                 //print "${var}"
             }
