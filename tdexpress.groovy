@@ -1,4 +1,8 @@
-//def datas
+import groovy.transform.Field
+@Field
+def datas
+@Field
+def var1
 //def var1
 pipeline{
     agent none
@@ -12,14 +16,13 @@ pipeline{
                 script{
                     def workspace= pwd()
                     datas = readYaml (file:"${workspace}/config.yml")
-                    def var1 = datas.config1.toString()
+                    var1 = datas.config1.toString()
                     def var2 = datas.config2.toString()
                     //echo props.config1.toString()
-                    echo var1
                 }
                 
                 echo datas.config1.toString()
-                //sh "chmod +x build.sh && ./build.sh ${params.Timestamp} ${var1}"
+                sh "chmod +x build.sh && ./build.sh ${params.Timestamp} ${var1}"
                 //echo "Timestamp is ${params.Timestamp}"
                 //print "${workspace}"
                 //print "${var}"
