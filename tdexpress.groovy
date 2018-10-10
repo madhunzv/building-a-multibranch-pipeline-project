@@ -1,7 +1,6 @@
 pipeline{
     agent none
-    environment{
-    }
+
     stages{
         stage('Build VMX'){
             agent {label 'master'}
