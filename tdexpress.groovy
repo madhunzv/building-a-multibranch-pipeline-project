@@ -13,7 +13,7 @@ pipeline{
                     def var = props.skipconfig.config1.toString()
                     //echo props.config1.toString()
                 }
-                echo props.config1.toString()
+                echo datas.config1.toString()
                 //print "${workspace}"
                 //print "${var}"
             }
