@@ -11,7 +11,7 @@ pipeline{
                     def x = props['skipconfig'][0]['config1']
                     //echo $x
                 }
-                print ${x}
+                print "${x}"
             }
         }
     }
