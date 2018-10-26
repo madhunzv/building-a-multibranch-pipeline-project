@@ -9,7 +9,7 @@ pipeline{
     }
     stages{
         stage('Build'){
-            agent {label 'master'}
+            //agent {label 'master'}
             steps{
                 script{
                     workspace= pwd()
