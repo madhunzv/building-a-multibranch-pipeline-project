@@ -3,7 +3,7 @@ import groovy.transform.Field
 //@Field def var1
 //@Field def var2
 pipeline{
-    agent none
+    //agent none
     parameters{
         string(name: 'Timestamp', description: 'Timestamp Folder Name to Download OVA')
     }
