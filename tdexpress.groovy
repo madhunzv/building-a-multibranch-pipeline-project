@@ -3,13 +3,13 @@ import groovy.transform.Field
 //@Field def var1
 //@Field def var2
 pipeline{
-    agent none
+    agent any
     parameters{
         string(name: 'Timestamp', description: 'Timestamp Folder Name to Download OVA')
     }
     stages{
         stage('Build'){
-            agent {label 'master'}
+            //agent {label 'master'}
             steps{
                 sh 'sed -ri "s/(.*teradata\/)(.*)/\1${params.Timestamp}\/\2/g" /root/tdexpress_build/try.txt'
                 script{
